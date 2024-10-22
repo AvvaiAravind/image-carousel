@@ -46,3 +46,97 @@ h6 {
 #__next {
   isolation: isolate;
 } */
+
+.none {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.carousel__viewport {
+  max-width: 1000px;
+  margin: 10px auto;
+  position: relative;
+}
+
+.carousel__prev-btn,
+.carousel__next-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  background-color: transparent;
+  font-weight: bold;
+  transition: 0.6s, ease;
+  border-radius: 0 3px 3px 0;
+  border-color: transparent;
+  user-select: none;
+}
+
+.carousel__next-btn {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.carousel__prev-btn:hover,
+.carousel__next-btn:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+figure {
+  position: relative;
+}
+
+figcaption,
+.carousel__slide-number {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  text-shadow: 1px 0 rgba(0, 0, 0, 1);
+  padding: 5px 10px;
+}
+
+.carousel__slide-number {
+  border-radius: 0 3px 3px 0;
+}
+
+figcaption {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+
+  border-radius: 5px;
+}
+
+.carousel__indicators {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel__indicator {
+  cursor: pointer;
+  display: inline-block;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.fade {
+  animation: fade 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}

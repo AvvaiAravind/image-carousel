@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Image Carousel</title>
     <script src="index.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <link
@@ -12,5 +12,81 @@
     />
     <!-- for using font awesome icons -->
   </head>
-  <body></body>
+  <body>
+    <section class="carousel" aria-label="Image carousel">
+      <div class="carousel__viewport">
+        <div class="carousel__slides">
+          <figure class="carousel__slide fade" data-active="true" id="slide1">
+            <span class="carousel__slide-number">1/3</span>
+            <img
+              src="./images/img_snow_wide.jpg"
+              alt="Mountain view"
+              title="picturesque mountain view"
+              width="1000"
+              height="350"
+            />
+            <figcaption>picturesque snow view</figcaption>
+          </figure>
+          <figure
+            class="carousel__slide fade none"
+            data-active="false"
+            id="slide2"
+          >
+            <span class="carousel__slide-number">2/3</span>
+            <img
+              src="./images/img_nature_wide.jpg"
+              alt="Mountain view"
+              title="picturesque mountain view"
+              width="1000"
+              height="350"
+            />
+            <figcaption>picturesque mountain view</figcaption>
+          </figure>
+          <figure
+            class="carousel__slide fade none"
+            data-active="false"
+            id="slide3"
+          >
+            <span class="carousel__slide-number">3/3</span>
+            <img
+              src="./images/img_mountains_wide.jpg"
+              alt="Mountain view"
+              title="picturesque mountain view"
+              width="1000"
+              height="350"
+            />
+            <figcaption>picturesque mountain view</figcaption>
+          </figure>
+        </div>
+        <nav class="carousel__navigation">
+          <button
+            type="button"
+            class="carousel__prev-btn"
+            data-carousel-btn="prev"
+          >
+            &#10094;
+          </button>
+          <button
+            type="button"
+            class="carousel__next-btn"
+            data-carousel-btn="next"
+          >
+            &#10095;
+          </button>
+        </nav>
+      </div>
+
+      <div class="carousel__indicators">
+        <button class="carousel__indicator" id="slide1-btn">
+          <i class="fa-solid fa-circle"></i>
+        </button>
+        <button class="carousel__indicator" id="slide2-btn">
+          <i class="fa-regular fa-circle"></i>
+        </button>
+        <button class="carousel__indicator" id="slide2-btn">
+          <i class="fa-regular fa-circle"></i>
+        </button>
+      </div>
+    </section>
+  </body>
 </html>

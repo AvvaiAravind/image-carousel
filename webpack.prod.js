@@ -9,7 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
-  devtool: "source-map", // Use source maps for production
+  devtool: "eval-source-map", // Use source maps for production
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
